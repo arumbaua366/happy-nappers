@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import logo from "./babylogo.png";
 import "./App.css";
 import Nav from "./components/Nav";
 import Buttons from "./components/Buttons";
+import Footer from "./components/Footer"
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
         <p className="App-intro">
           <Buttons />
         </p>
+        <Footer />
       </div>
     );
   }
