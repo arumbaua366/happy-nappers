@@ -18,7 +18,6 @@ class App extends Component {
           
         </div>
         <p className="App-intro">
-          <Buttons />
           <Accordion/>
         </p>
         <Footer />

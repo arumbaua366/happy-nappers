@@ -6,6 +6,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Buttons from "../Buttons"
+import Buttons2 from "../Buttons2"
 import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -62,7 +63,7 @@ export default function ControlledExpansionPanels() {
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-            <Buttons />
+            <Buttons2 />
           {/* <Typography>
             Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
             diam eros in elit. Pellentesque convallis laoreet laoreet.
