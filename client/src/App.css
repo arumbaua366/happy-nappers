@@ -22,3 +22,7 @@
   0%, 100% { transform: rotate(-10deg); }
   50% { transform: rotate(8deg); }
 }
+
+body {
+  background-color: bisque;
+}
