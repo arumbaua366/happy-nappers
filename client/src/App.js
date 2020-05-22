@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./babylogo.png";
+// import logo from "./babylogo.png";
 import "./App.css";
 import Nav from "./components/Nav";
 import Buttons from "./components/Buttons";
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <h2>Happy Nappers
           <Nav />
           </h2>
@@ -19,7 +19,9 @@ class App extends Component {
         <p className="App-intro">
           <Buttons />
         </p>
+        <div>
         <Footer />
+        </div>
       </div>
     );
   }

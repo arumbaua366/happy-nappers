@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
+import Brightness7SharpIcon from '@material-ui/icons/Brightness7Sharp';
+
 
 const images = [
   {
@@ -28,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     height: 400,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
-      height: 100,
+      height: 300,
     },
     '&:hover, &$focusVisible': {
       zIndex: 1,
