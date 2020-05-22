@@ -4,6 +4,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Buttons from "./components/Buttons";
 import Footer from "./components/Footer"
+import Accordion from "./components/Accordion"
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
         </div>
         <p className="App-intro">
           <Buttons />
+          <Accordion/>
         </p>
         <Footer />
       </div>
