@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 const images = [
   
   {
-    url: 'https://images.unsplash.com/photo-1536746803623-cef87080bfc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60',
+    url: 'https://media2.giphy.com/media/3ohze0k1Z43jsEJMCQ/giphy.gif?cid=6104955e8fe36ca832f97b44d7d842372eb39e7405d67085&rid=giphy.gif',
     title: 'Asleep',
     width: '100%',
   },

@@ -5,8 +5,8 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-// import Buttons from "../Buttons"
-// import Buttons2 from "../Buttons2"
+import Buttons from "../Buttons"
+import Buttons2 from "../Buttons2"
 import { Button } from '@material-ui/core';
 import Iconbtn1 from "../Iconbtn1";
 import Iconbtn2 from "../Iconbtn2";
@@ -49,6 +49,7 @@ export default function ControlledExpansionPanels() {
           {/* <Typography className={classes.secondaryHeading}>I am an expansion panel</Typography> */}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
+            <Buttons />
           {/* <Typography>
             Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
             maximus est, id dignissim quam.
@@ -67,6 +68,7 @@ export default function ControlledExpansionPanels() {
           {/* </Typography> */}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
+            <Buttons2 />
           {/* <Typography>
             Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
             diam eros in elit. Pellentesque convallis laoreet laoreet.
