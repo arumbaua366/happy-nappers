@@ -5,9 +5,13 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Buttons from "../Buttons"
-import Buttons2 from "../Buttons2"
+// import Buttons from "../Buttons"
+// import Buttons2 from "../Buttons2"
 import { Button } from '@material-ui/core';
+import Iconbtn1 from "../Iconbtn1";
+import Iconbtn2 from "../Iconbtn2";
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,7 +44,7 @@ export default function ControlledExpansionPanels() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         > 
-                    <Buttons />
+            <Iconbtn1 />
           {/* <Typography className={classes.heading}>General settings</Typography> */}
           {/* <Typography className={classes.secondaryHeading}>I am an expansion panel</Typography> */}
         </ExpansionPanelSummary>
@@ -57,7 +61,7 @@ export default function ControlledExpansionPanels() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-                    <Buttons2 />
+            <Iconbtn2 />
           {/* <Typography className={classes.heading}>Users</Typography>
           <Typography className={classes.secondaryHeading}> */}
           {/* </Typography> */}
