@@ -39,12 +39,12 @@ export default function ControlledExpansionPanels() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
-        >
-          <Typography className={classes.heading}>General settings</Typography>
-          <Typography className={classes.secondaryHeading}>I am an expansion panel</Typography>
+        > 
+                    <Buttons />
+          {/* <Typography className={classes.heading}>General settings</Typography> */}
+          {/* <Typography className={classes.secondaryHeading}>I am an expansion panel</Typography> */}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-            <Buttons />
           {/* <Typography>
             Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
             maximus est, id dignissim quam.
@@ -57,13 +57,12 @@ export default function ControlledExpansionPanels() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography className={classes.heading}>Users</Typography>
-          <Typography className={classes.secondaryHeading}>
-            You are currently not an owner
-          </Typography>
+                    <Buttons2 />
+          {/* <Typography className={classes.heading}>Users</Typography>
+          <Typography className={classes.secondaryHeading}> */}
+          {/* </Typography> */}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-            <Buttons2 />
           {/* <Typography>
             Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
             diam eros in elit. Pellentesque convallis laoreet laoreet.
