@@ -9,6 +9,10 @@ import Collapse from '@material-ui/core/Collapse';
 import Buttons from "../Buttons"
 import Buttons2 from "../Buttons2"
 import { Button } from '@material-ui/core';
+import Iconbtn1 from "../Iconbtn1";
+import Iconbtn2 from "../Iconbtn2";
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,9 +44,10 @@ export default function ControlledExpansionPanels() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
-        >
-          <Typography className={classes.heading}>General settings</Typography>
-          <Typography className={classes.secondaryHeading}>I am an expansion panel</Typography>
+        > 
+            <Iconbtn1 />
+          {/* <Typography className={classes.heading}>General settings</Typography> */}
+          {/* <Typography className={classes.secondaryHeading}>I am an expansion panel</Typography> */}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
             <Buttons />
@@ -58,10 +63,10 @@ export default function ControlledExpansionPanels() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography className={classes.heading}>Users</Typography>
-          <Typography className={classes.secondaryHeading}>
-            You are currently not an owner
-          </Typography>
+            <Iconbtn2 />
+          {/* <Typography className={classes.heading}>Users</Typography>
+          <Typography className={classes.secondaryHeading}> */}
+          {/* </Typography> */}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
             <Buttons2 />
