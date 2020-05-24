@@ -2,14 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-import Brightness7SharpIcon from '@material-ui/icons/Brightness7Sharp';
-
 
 const images = [
   
   {
     url: 'https://images.unsplash.com/photo-1536746803623-cef87080bfc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60',
-    title: 'Asleep',
+    title: 'Awake',
     width: '100%',
   },
 ];
