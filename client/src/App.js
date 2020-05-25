@@ -4,11 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Accordion from "./components/Accordion";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
-// import Main from "./pages/Main"
+import Home from "./pages/Home"
 
 class App extends Component {
   render() {
@@ -16,14 +15,12 @@ class App extends Component {
       <Router>
         <Nav />
         <Switch>
-          {/* <Route exact path="/" component={Main} /> */}
+          <Route exact path="/home" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/profile" component={Profile} />
         </Switch>
-        <p className="App-intro">
-       <Accordion/>
-      </p>
+    
         <Footer />
       </Router>
 

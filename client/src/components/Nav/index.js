@@ -70,9 +70,9 @@ export default function MenuAppBar() {
                 aria-controls="menu-appbar"
                 color="inherit"
               >
-                 <AccountCircle />
+                 
                  <Link variant="button" color="inherit" href="/profile" className={classes.link}>
-							Profile
+							<AccountCircle />
 							</Link>
               </IconButton>
               {/* </nav> */}
