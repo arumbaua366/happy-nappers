@@ -1,26 +1,39 @@
 import React, { Component } from "react";
+import { Router, Route, Switch } from "react-router-dom";
 // import logo from "./babylogo.png";
 import "./App.css";
 import Nav from "./components/Nav";
-import Buttons from "./components/Buttons";
-import Footer from "./components/Footer"
-import Accordion from "./components/Accordion"
+import Footer from "./components/Footer";
+import Accordion from "./components/Accordion";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Signup from "./pages/Signup";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <Nav />        
-        </div>
-        <p className="App-intro">
-          <Accordion/>
-        </p>
-        <div>
+      <Router>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/profile" component={Profile} />
+        </Switch>
+
         <Footer />
-        </div>
-      </div>
+      </Router>
+
+      // <div className="App">
+      //     {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      //     <Nav />
+      //   <p className="App-intro">
+      //     <Accordion/>
+      //   </p>
+      //   <div>
+      //   <Footer />
+      //   </div>
+      // </div>
     );
   }
 }

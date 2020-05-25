@@ -10,6 +10,7 @@
     "mongoose": "^5.9.15",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.1",
     "spotify-web-api-js": "^1.4.0"
   },
