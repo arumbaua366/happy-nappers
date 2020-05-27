@@ -1,30 +1,30 @@
 import React, { Component } from "react";
-import logo from "./babylogo.png";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import logo from "./babylogo.png";
 import "./App.css";
 import Nav from "./components/Nav";
-import Buttons from "./components/Buttons";
-import Footer from "./components/Footer"
-import Accordion from "./components/Accordion"
-// Profile Page Imports
-import NavProfile from "./components/NavProfile"
+import Footer from "./components/Footer";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Signup from "./pages/Signup";
+import Home from "./pages/Home"
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        {/* <div className="App-header">
-        </div> */}
-        {/* Main Page  */}
-          {/* <Nav />        
-        <p className="App-intro">
-          <Accordion/>
-        </p>
-        <Footer /> */}
-        {/* Main Page  */}
-        {/* Profile Page */}
-        <NavProfile />
-        {/* Profile Page */}
-      </div>
+      <Router>
+        <Nav />
+        <Switch>
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/profile" component={Profile} />
+        </Switch>
+    
+        <Footer />
+      </Router>
+
+
     );
   }
 }

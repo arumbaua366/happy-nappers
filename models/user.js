@@ -2,10 +2,55 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  first: { type: String, required: true },
-  last: { type: String, required: true },
-  age: Number,
-  signup: { type: Date, default: Date.now }
+  spotifyID: 
+  { 
+    type: String, 
+    trim: true,
+    required: true 
+  },
+  profilePic: 
+  { 
+    type: String, 
+    required: true 
+  },
+  displayName:
+  {
+    type: String,
+    trim: true,
+    required: true
+  },
+  email: 
+  {
+    type: String,
+    trim: true,
+    lowercase: true,
+    required: true
+  },
+  profileURL: 
+  {
+    type: String,
+    required: true
+  },
+  accessToken: 
+  {
+    type: String,
+    required: true
+  },
+  refreshToken: 
+  {
+    type: String,
+    required: true
+  },
+  country: 
+  {
+    type: String,
+    required: true
+  },
+  accountType: 
+  {
+    type: String,
+    required: true
+  },
 });
 
 const User = mongoose.model("User", userSchema);

@@ -6,11 +6,10 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-// import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
+import Link from '@material-ui/core/Link';
+// import { MemoryRouter as Router } from 'react-router';
+// import { Link } from 'react-router-dom';
+// import Profile from '../../pages/Profile'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,74 +22,45 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
+// const preventDefault = (event) => event.preventDefault();
 
 export default function MenuAppBar() {
   const classes = useStyles();
-  const [auth, setAuth] = React.useState(true);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
-
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   return (
     <div className={classes.root}>
-      {/* <FormGroup>
-        <FormControlLabel
-          control={<Switch checked={auth} onChange={handleChange} aria-label="login switch" />}
-          label={auth ? 'Logout' : 'Login'}
-        />
-      </FormGroup> */}
       <AppBar position="static">
         <Toolbar>
+          {/* <nav> */}
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
+            <Link variant="button" color="inherit" href="/login" className={classes.link}>
+							Login
+							</Link>
+							<Link variant="button" color="inherit" href="/signup" className={classes.link}>
+							Signup
+							</Link>
+							
+							<Link variant="button" color="inherit" href="/home" className={classes.link}>
+							Home
+							</Link>
           </IconButton>
+          {/* </nav> */}
           <Typography variant="h6" className={classes.title}>
             happy nappers
           </Typography>
-          {auth && (
-            <div>
+            {/* <nav> */}
               <IconButton
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-              >
-                <AccountCircle />
+                color="inherit">
+                 <Link variant="button" color="inherit" href="/profile" className={classes.link}>
+							<AccountCircle />
+							</Link>
               </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={open}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                {/* <MenuItem onClick={handleClose}>My account</MenuItem> */}
-              </Menu>
-            </div>
-          )}
         </Toolbar>
       </AppBar>
     </div>
   );
 }
+
