@@ -1,14 +1,17 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import { styled } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
-// The ...props means, spread all of the passed props onto this element
-// That way we don't have to define them all individually
-function DeleteBtn(props) {
-  return (
-    <span className="delete-btn" {...props} role="button" tabIndex="0">
-      ✗
-    </span>
-  );
+const MyButton = styled(Button)({
+  background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+  border: 0,
+  borderRadius: 3,
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  color: 'white',
+  height: 48,
+  padding: '0 30px',
+});
+
+export default function StyledComponents() {
+  return <MyButton>Delete Account</MyButton>;
 }
-
-export default DeleteBtn;

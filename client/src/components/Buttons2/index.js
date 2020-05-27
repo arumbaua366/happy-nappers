@@ -1,12 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 
 const images = [
   
   {
-    url: 'https://images.unsplash.com/photo-1536746803623-cef87080bfc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60',
+    url: 'https://media2.giphy.com/media/3ohze0k1Z43jsEJMCQ/giphy.gif?cid=6104955e8fe36ca832f97b44d7d842372eb39e7405d67085&rid=giphy.gif',
     title: 'Asleep',
     width: '100%',
   },
@@ -21,15 +21,15 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     position: 'relative',
-    height: 400,
+    height: 450,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
-      height: 100,
+      height: 300,
     },
     '&:hover, &$focusVisible': {
       zIndex: 1,
       '& $imageBackdrop': {
-        opacity: 0.15,
+        opacity: 0,
       },
       '& $imageMarked': {
         opacity: 0,
@@ -66,8 +66,8 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     top: 0,
     bottom: 0,
-    backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
+    // backgroundColor: theme.palette.common.black,
+    opacity: 0,
     transition: theme.transitions.create('opacity'),
   },
   imageTitle: {
@@ -107,7 +107,7 @@ export default function ButtonBases() {
             }}
           />
           <span className={classes.imageBackdrop} />
-          <span className={classes.imageButton}>
+          {/* <span className={classes.imageButton}>
             <Typography
               component="span"
               variant="subtitle1"
@@ -117,7 +117,7 @@ export default function ButtonBases() {
               {image.title}
               <span className={classes.imageMarked} />
             </Typography>
-          </span>
+          </span> */}
         </ButtonBase>
       ))}
     </div>

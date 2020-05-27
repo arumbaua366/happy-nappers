@@ -1,58 +1,66 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import MenuIcon from '@material-ui/icons/Menu';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import Link from '@material-ui/core/Link';
+// import { MemoryRouter as Router } from 'react-router';
+// import { Link } from 'react-router-dom';
+// import Profile from '../../pages/Profile'
 
-const options = [
-  'Sign Up',
-  'Login',
-  'Profile',
-];
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
+// const preventDefault = (event) => event.preventDefault();
 
-const ITEM_HEIGHT = 48;
-
-export default function LongMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+export default function MenuAppBar() {
+  const classes = useStyles();
 
   return (
-    <div>
-      <IconButton
-        aria-label="more"
-        aria-controls="long-menu"
-        aria-haspopup="true"
-        onClick={handleClick}
-      >
-        <MoreVertIcon />
-      </IconButton>
-      <Menu
-        id="long-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={open}
-        onClose={handleClose}
-        PaperProps={{
-          style: {
-            maxHeight: ITEM_HEIGHT * 4.5,
-            width: '20ch',
-          },
-        }}
-      >
-        {options.map((option) => (
-          <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-            {option}
-          </MenuItem>
-        ))}
-      </Menu>
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          {/* <nav> */}
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+            <Link variant="button" color="inherit" href="/login" className={classes.link}>
+							Login
+							</Link>
+							<Link variant="button" color="inherit" href="/signup" className={classes.link}>
+							Signup
+							</Link>
+							
+							<Link variant="button" color="inherit" href="/home" className={classes.link}>
+							Home
+							</Link>
+          </IconButton>
+          {/* </nav> */}
+          <Typography variant="h6" className={classes.title}>
+            happy nappers
+          </Typography>
+            {/* <nav> */}
+              <IconButton
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                color="inherit">
+                 <Link variant="button" color="inherit" href="/profile" className={classes.link}>
+							<AccountCircle />
+							</Link>
+              </IconButton>
+        </Toolbar>
+      </AppBar>
     </div>
   );
 }
+
