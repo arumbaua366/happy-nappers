@@ -8,6 +8,7 @@
     "@material-ui/icons": "^4.9.1",
     "express": "^4.17.1",
     "mongoose": "^5.9.15",
+    "passport": "^0.4.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.2.0",

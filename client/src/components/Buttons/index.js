@@ -1,13 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 
 const images = [
   
   {
     url: 'https://media3.giphy.com/media/qZohEEh4bhuQ8/giphy.gif?cid=6104955eec03a397e8f246036534b4597eed2d1fcfa22281&rid=giphy.gif',
-    title: '',
+    // title: '',
     width: '100%',
   },
 ];
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     position: 'relative',
-    height: 400,
+    height: 450,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
       height: 300,
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover, &$focusVisible': {
       zIndex: 1,
       '& $imageBackdrop': {
-        opacity: 0.15,
+        opacity: 0,
       },
       '& $imageMarked': {
         opacity: 0,
@@ -40,17 +40,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   focusVisible: {},
-  imageButton: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: theme.palette.common.white,
-  },
+  // imageButton: {
+  //   position: 'absolute',
+  //   left: 0,
+  //   right: 0,
+  //   top: 0,
+  //   bottom: 0,
+  //   display: 'flex',
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  //   color: theme.palette.common.white,
+  // },
   imageSrc: {
     position: 'absolute',
     left: 0,
@@ -66,8 +66,8 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     top: 0,
     bottom: 0,
-    backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
+    // backgroundColor: theme.palette.common.black,
+    opacity: 0,
     transition: theme.transitions.create('opacity'),
   },
   imageTitle: {
@@ -107,7 +107,7 @@ export default function ButtonBases() {
             }}
           />
           <span className={classes.imageBackdrop} />
-          <span className={classes.imageButton}>
+          {/* <span className={classes.imageButton}>
             <Typography
               component="span"
               variant="subtitle1"
@@ -117,7 +117,7 @@ export default function ButtonBases() {
               {image.title}
               <span className={classes.imageMarked} />
             </Typography>
-          </span>
+          </span> */}
         </ButtonBase>
       ))}
     </div>

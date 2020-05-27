@@ -26,21 +26,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MenuAppBar() {
   const classes = useStyles();
-  // const [auth, setAuth] = React.useState(true);
-  // const [anchorEl, setAnchorEl] = React.useState(null);
-  // const open = Boolean(anchorEl);
-
-  // const handleChange = (event) => {
-  //   setAuth(event.target.checked);
-  // };
-
-  // const handleMenu = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // };
-
-  // const handleClose = () => {
-  //   setAnchorEl(null);
-  // };
 
   return (
     <div className={classes.root}>
@@ -68,33 +53,11 @@ export default function MenuAppBar() {
               <IconButton
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
-                color="inherit"
-              >
-                 
+                color="inherit">
                  <Link variant="button" color="inherit" href="/profile" className={classes.link}>
 							<AccountCircle />
 							</Link>
               </IconButton>
-              {/* </nav> */}
-          {/* {auth && (
-            <div>
-              <Router>
-              <IconButton
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                color="inherit"
-              >
-
-              <Link component={RouterLink} to={Profile} onClick={preventDefault}>
-  </Link>
-          
-
-                <AccountCircle />
-              </IconButton>
-              </Router>
-            
-            </div> */}
-          {/* )} */}
         </Toolbar>
       </AppBar>
     </div>

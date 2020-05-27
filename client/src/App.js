@@ -24,16 +24,7 @@ class App extends Component {
         <Footer />
       </Router>
 
-      // <div className="App">
-      //     {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      //     <Nav />
-      //   <p className="App-intro">
-      //     <Accordion/>
-      //   </p>
-      //   <div>
-      //   <Footer />
-      //   </div>
-      // </div>
+
     );
   }
 }

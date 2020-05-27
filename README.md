@@ -4,14 +4,14 @@ Happy Nappers
 # User Story
 
 
-# Technology Used
+# Built With
 
 
 # Authors
-[Mark Ohanasian](https://github.com/markohanesian) 
-[Andrea Rumbaua](https://github.com/arumbaua366)
-[Don Nguyen](https://github.com/TDPN)
-[Michael Le](https://github.com/michael20996)
+* [Mark Ohanasian](https://github.com/markohanesian) 
+* [Andrea Rumbaua](https://github.com/arumbaua366)
+* [Don Nguyen](https://github.com/TDPN)
+* [Michael Le](https://github.com/michael20996)
 
 
 # Contributors
