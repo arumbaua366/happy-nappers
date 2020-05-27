@@ -5,6 +5,8 @@ import Nav from "./components/Nav";
 import Buttons from "./components/Buttons";
 import Footer from "./components/Footer"
 import Accordion from "./components/Accordion"
+// Profile Page Imports
+import NavProfile from "./components/NavProfile"
 
 class App extends Component {
   render() {
@@ -12,11 +14,16 @@ class App extends Component {
       <div className="App">
         {/* <div className="App-header">
         </div> */}
-          <Nav />        
+        {/* Main Page  */}
+          {/* <Nav />        
         <p className="App-intro">
           <Accordion/>
         </p>
-        <Footer />
+        <Footer /> */}
+        {/* Main Page  */}
+        {/* Profile Page */}
+        <NavProfile />
+        {/* Profile Page */}
       </div>
     );
   }
