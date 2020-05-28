@@ -3,7 +3,7 @@ import React from "react"
 function Login() {
     return (
         <div className='App'>
-          <a href='http://localhost:8888'> Login to Spotify </a>
+          <a href='/spotify/login'> Login to Spotify </a>
         </div>
       )
 }
