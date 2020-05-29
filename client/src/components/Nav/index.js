@@ -10,6 +10,9 @@ import Link from '@material-ui/core/Link';
 // import { MemoryRouter as Router } from 'react-router';
 // import { Link } from 'react-router-dom';
 // import Profile from '../../pages/Profile'
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,43 +27,71 @@ const useStyles = makeStyles((theme) => ({
 }));
 // const preventDefault = (event) => event.preventDefault();
 
+ 
 export default function MenuAppBar() {
   const classes = useStyles();
+  const [auth, setAuth] = React.useState(true);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleChange = (event) => {
+    setAuth(event.target.checked);
+  };
+
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          {/* <nav> */}
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-            <Link variant="button" color="inherit" href="/login" className={classes.link}>
-							Login
-							</Link>
-							<Link variant="button" color="inherit" href="/signup" className={classes.link}>
-							Signup
-							</Link>
-							
-							<Link variant="button" color="inherit" href="/home" className={classes.link}>
-							Home
-							</Link>
-          </IconButton>
-          {/* </nav> */}
-          <Typography variant="h6" className={classes.title}>
-            happy nappers
-          </Typography>
-            {/* <nav> */}
+        {auth && (
+            <div>
               <IconButton
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
-                color="inherit">
-                 <Link variant="button" color="inherit" href="/profile" className={classes.link}>
-							<AccountCircle />
-							</Link>
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+              >
+                <MenuIcon />
               </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Home</MenuItem>
+                <MenuItem onClick={handleClose}>Signup</MenuItem>
+                <MenuItem onClick={handleClose}>Login</MenuItem>
+              </Menu>
+            </div>
+          )}
+          <Typography variant="h6" className={classes.title}>
+            happy nappers
+          </Typography>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
+  
 
