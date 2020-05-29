@@ -12,7 +12,7 @@ import Link from '@material-ui/core/Link';
 // import Profile from '../../pages/Profile'
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-
+import ProfileBtn from "../ProfileBtn"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -85,9 +85,10 @@ export default function MenuAppBar() {
           <Typography variant="h6" className={classes.title}>
             happy nappers
           </Typography>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+          {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <AccountCircle />
+          </IconButton> */}
+          <ProfileBtn />
         </Toolbar>
       </AppBar>
     </div>
