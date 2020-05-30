@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 class Signup extends Component {
@@ -47,8 +48,11 @@ class Signup extends Component {
 
 
 render() {
+	if (this.state.redirectTo) {
+		return <Redirect to={{ pathname: '/login' }} />
+	} else {
 	return (
-		<div className="SignupForm">
+		<div className="Signup">
 			<h4>Sign up</h4>
 			<form className="form-horizontal">
 				<div className="form-group">
@@ -91,8 +95,9 @@ render() {
 			</form>
 		</div>
 
-	)
-}
+	  )
+    }
+  }
 }
 
 export default Signup
