@@ -13,6 +13,9 @@ import Link from '@material-ui/core/Link';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import ProfileBtn from "../ProfileBtn"
+import LinkHome from "../LinkHome"
+import LinkLogin from "../LinkLogin"
+import LinkSignup from "../LinkSignup"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -76,9 +79,15 @@ export default function MenuAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Home</MenuItem>
-                <MenuItem onClick={handleClose}>Signup</MenuItem>
-                <MenuItem onClick={handleClose}>Login</MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <LinkHome />
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <LinkLogin />
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <LinkSignup />
+                </MenuItem>
               </Menu>
             </div>
           )}
