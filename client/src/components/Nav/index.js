@@ -12,10 +12,10 @@ import Link from '@material-ui/core/Link';
 // import Profile from '../../pages/Profile'
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import ProfileBtn from "../ProfileBtn"
-import LinkHome from "../LinkHome"
 import LinkLogin from "../LinkLogin"
 import LinkSignup from "../LinkSignup"
+import LinkProfile from "../LinkProfile"
+import LinkHome from "../LinkHome"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,6 +53,10 @@ export default function MenuAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
+        <LinkHome />
+        <Typography variant="h6" className={classes.title}>
+          {/* leave this typography here for alignment */}
+        </Typography>
         {auth && (
             <div>
               <IconButton
@@ -62,25 +66,25 @@ export default function MenuAppBar() {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <MenuIcon />
+              <MenuIcon />
               </IconButton>
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorEl}
                 anchorOrigin={{
                   vertical: 'top',
-                  horizontal: 'left',
+                  horizontal: 'right',
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: 'top',
-                  horizontal: 'left',
+                  horizontal: 'right',
                 }}
                 open={open}
                 onClose={handleClose}
               >
                 <MenuItem onClick={handleClose}>
-                  <LinkHome />
+                  <LinkProfile />
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <LinkLogin />
@@ -91,13 +95,9 @@ export default function MenuAppBar() {
               </Menu>
             </div>
           )}
-          <Typography variant="h6" className={classes.title}>
-            happy nappers
-          </Typography>
           {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <AccountCircle />
           </IconButton> */}
-          <ProfileBtn />
         </Toolbar>
       </AppBar>
     </div>
