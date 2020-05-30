@@ -2,12 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-// import Avatar from "../Avatar"
-import DeleteBtn from "../DeleteBtn"
-import ReturnBtn from "../ReturnBtn"
-// import TypographyP from "../TypographyP"
 import Footer2 from "../Footer2"
-// import Footer from "../Footer"
 import Login from "../Login"
 
 const useStyles = makeStyles((theme) => ({

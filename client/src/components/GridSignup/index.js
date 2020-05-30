@@ -4,8 +4,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 // import Avatar from "../Avatar"
 import DeleteBtn from "../DeleteBtn"
-import ReturnBtn from "../ReturnBtn"
-// import TypographyP from "../TypographyP"
 import Footer2 from "../Footer2"
 // import Footer from "../Footer"
 import SignUp from "../SignUp"
