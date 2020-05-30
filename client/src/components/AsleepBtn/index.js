@@ -24,7 +24,7 @@ export default function CustomizedButtons() {
 
   return (
     <div>
-      <ColorButton variant="contained" color="primary" className={classes.margin} href="/Asleep">
+      <ColorButton variant="contained" color="primary" className={classes.margin} href="/asleep">
         asleep
       </ColorButton>
     </div>

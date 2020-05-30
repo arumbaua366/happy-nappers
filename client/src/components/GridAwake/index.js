@@ -25,13 +25,7 @@ export default function CenteredGrid() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-              <img src="https://images.unsplash.com/photo-1537815749002-de6a533c64db?ixlib=rb-1.2.1&auto=format&fit=crop&w=1090&q=80" alt="Avatar" id="avatar" style={{verticalAlign: "middle", width: "200px", height: "200px", borderRadius: "50%", padding: "30px" }}></img>
-              <h2>Jane Doe</h2>
-              <h3><i>Sacramento, CA</i></h3> 
-              <p>Awake Mode Used: 13</p>
-              <p>Asleep Mode Used: 13</p>
-              <br></br>
-              <p><i>member since:2020</i></p>
+              <img src="https://media3.giphy.com/media/qZohEEh4bhuQ8/giphy.gif?cid=6104955eec03a397e8f246036534b4597eed2d1fcfa22281&rid=giphy.gif" alt="Sun" style={{verticalAlign: "middle", width: "500px", height: "500px", padding: "30px" }}></img>
             </Paper>
         </Grid>
         {/* <Grid item xs={12}>
@@ -40,7 +34,7 @@ export default function CenteredGrid() {
         </Grid> */}
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-            <DeleteBtn />
+
           </Paper>
         </Grid>
         <Footer2 />
