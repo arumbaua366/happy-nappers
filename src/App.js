@@ -8,8 +8,8 @@ import Navbar from './components/navbar'
 import Home from './components/home'
 import Profile from './components/profile'
 import Footer from './components/Footer'
-// import Asleep from './components/Asleep'
-// import Awake from './components/Awake'
+import Asleep from './components/Asleep'
+import Awake from './components/Awake'
 
 class App extends Component {
   constructor() {
@@ -89,8 +89,8 @@ class App extends Component {
           {this.state.loggedIn &&
           <p>Welcome, {this.state.username}!</p>
         }
-        {/* <Route exact path='/Asleep' component={Asleep} />
-        <Route exact path='/Awake' component={Awake} /> */}
+        <Route exact path='/Asleep' component={Asleep} />
+        <Route exact path='/Awake' component={Awake} />
         {/* Routes to different components */}
       <Footer />
       </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Footer2 from "../Footer2"
 import SignUp from "../SignUp"
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +31,6 @@ export default function CenteredGrid() {
               <p><i>Don't have an account? Signup!</i></p> */}
             </Paper>
         </Grid>
-        <Footer2 />
       </Grid>
     </div>
   );
