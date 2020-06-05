@@ -2,8 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import DeleteBtn from "../DeleteBtn"
 import Footer2 from "../Footer2"
+import Login from "../Login"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,16 +25,11 @@ export default function CenteredGrid() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-              <img src="https://media3.giphy.com/media/qZohEEh4bhuQ8/giphy.gif?cid=6104955eec03a397e8f246036534b4597eed2d1fcfa22281&rid=giphy.gif" alt="Sun" style={{verticalAlign: "middle", width: "500px", height: "500px", padding: "30px" }}></img>
-            </Paper>
-        </Grid>
-        {/* <Grid item xs={12}>
-          <Paper className={classes.paper}>
-          </Paper>
-        </Grid> */}
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>
-
+            <Login />
+              {/* <h2><b>User Name</b></h2>
+              <h2><b>Password</b></h2>
+              <br></br>
+              <p><i>Don't have an account? Signup!</i></p> */}
           </Paper>
         </Grid>
         <Footer2 />

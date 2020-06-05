@@ -4,12 +4,27 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-# About
-I couldn't find a simple MERN passport tutorial, so I made one!
+# Links
+* [Deployed Site] tbd
+* [Github](https://github.com/arumbaua366/happy-nappers)
+* [Project Management](https://github.com/arumbaua366/happy-nappers/projects/1)
+* [Google Doc](https://docs.google.com/document/d/19VVvtqEw6IXby7mdAdby6luc0bVuAAzFE0YiiEjSDlU/edit?usp=sharing)
+* [UI Mockup](https://xd.adobe.com/view/f58684d2-996d-46f2-7c9f-5ff6cc3d4e9f-83b7/)
 
-## Built With
+# Built With
+* React
+* Material UI
+* Spotify API
+* MongoDB
+* Express
+* Node
 
-Mongo, Express, ReactJS, Node.js, Javascript. 
+# Description
+Happy nappers is a simple web app that allows you to toggle between awake and asleep modes  that generate music and visualizations for babies that help with both sleep time and playtime. 
+
+# Planned Features/Outstanding Issues
+* Functional login and signup with app and spotify 
+* Functional music player on awake/asleep modes
 
 ## Getting Started
 

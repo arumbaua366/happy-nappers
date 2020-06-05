@@ -18,8 +18,8 @@ export default function Links() {
 
   return (
     <Typography className={classes.root}>
-      <Link href="https://github.com/arumbaua366/happy-nappers" onClick={preventDefault}>
-        github
+      <Link href="/signup"  color="inherit">
+        Signup
       </Link>
     </Typography>
   );
