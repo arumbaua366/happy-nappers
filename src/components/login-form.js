@@ -55,15 +55,22 @@ class LoginForm extends Component {
         if (this.state.redirectTo) {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
+            const loginStyle = {
+                position: 'fixed',
+                top: '50%',
+                left: '50%',
+                marginTop: '-150px',
+                marginLeft: '-100px'
+            }    
             return (
-                <div>
-                    <h4>Login</h4>
+                <div style={loginStyle}>
+                    <h4 className="col-12">Login</h4>
                     <form className="form-horizontal">
                         <div className="form-group">
-                            <div className="col-1 col-ml-auto">
+                            <div>
                                 <label className="form-label" htmlFor="username">Username</label>
                             </div>
-                            <div className="col-3 col-mr-auto">
+                            <div>
                                 <input className="form-input"
                                     type="text"
                                     id="username"
@@ -75,10 +82,10 @@ class LoginForm extends Component {
                             </div>
                         </div>
                         <div className="form-group">
-                            <div className="col-1 col-ml-auto">
+                            <div>
                                 <label className="form-label" htmlFor="password">Password: </label>
                             </div>
-                            <div className="col-3 col-mr-auto">
+                            <div>
                                 <input className="form-input"
                                     placeholder="password"
                                     type="password"
@@ -91,7 +98,7 @@ class LoginForm extends Component {
                         <div className="form-group ">
                             <div className="col-7"></div>
                             <button
-                                className="btn btn-primary col-1 col-mr-auto"
+                                className="btn btn-primary col-mr-auto"
                                
                                 onClick={this.handleSubmit}
                                 type="submit">Login</button>

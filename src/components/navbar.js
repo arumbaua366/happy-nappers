@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 // import { Redirect } from 'react-router-dom'
 // import { Route, Link } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import logo from '../logo.svg';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+// import logo from '../logo.svg';
 import '../App.css';
 import axios from 'axios'
 
@@ -35,35 +37,40 @@ class Navbar extends Component {
         
         return (
             <div>
-
-                <header className="navbar App-header" id="nav-container">
-                    <div className="col-4" >
+                <AppBar>
+                <Toolbar>
+                    <div>
                         {loggedIn ? (
                             <section className="navbar-section">
                                 <Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
                                 <span className="text-secondary">logout</span></Link>
-
+                                <Link to="/" className="btn btn-link text-secondary">
+                                    <span className="text-secondary">home</span>
+                                </Link>
+                                <Link to="/profile" className="btn btn-link">
+                                    <span className="text-secondary">profile</span>
+				                </Link>
+                                
                             </section>
                         ) : (
                                 <section className="navbar-section">
-                                    <Link to="/" className="btn btn-link text-secondary">
-                                        <span className="text-secondary">home</span>
-                                        </Link>
                                     <Link to="/login" className="btn btn-link text-secondary">
                                     <span className="text-secondary">login</span>
-				</Link>
+				                    </Link>
                                     <Link to="/signup" className="btn btn-link">
                                     <span className="text-secondary">sign up</span>
-				</Link>
+				                    </Link>
+               
                                 </section>
                             )}
                     </div>
-                    <div className="col-4 col-mr-auto">
+                    <div className="col-4 col-ml-auto">
                     <div id="top-filler"></div>
-                        <img src={logo} className="App-logo" alt="logo" />
+                        {/* <img src={logo} className="App-logo" alt="logo" /> */}
                         <h1 className="App-title">Happy Nappers</h1>
                     </div>
-                </header>
+                    </Toolbar>
+                </AppBar>
             </div>
 
         );

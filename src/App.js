@@ -6,6 +6,10 @@ import Signup from './components/sign-up'
 import LoginForm from './components/login-form'
 import Navbar from './components/navbar'
 import Home from './components/home'
+import Profile from './components/profile'
+import Footer from './components/Footer'
+// import Asleep from './components/Asleep'
+// import Awake from './components/Awake'
 
 class App extends Component {
   constructor() {
@@ -50,18 +54,25 @@ class App extends Component {
   }
 
   render() {
+    const appStyle = {
+      position: 'fixed',
+    	top: '30%',
+    	left: '50%',
+    	marginTop: '-150px',
+      marginLeft: '-250px',
+      marginBottom:'50px',
+      paddingBottom:'50px'
+    }
     return (
-      <div className="App">
+      <div style={appStyle} className="App">
    
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        {/* greet user if logged in: */}
-        {this.state.loggedIn &&
-          <p>Join the party, {this.state.username}!</p>
-        }
-        {/* Routes to different components */}
         <Route
           exact path="/"
           component={Home} />
+        <Route
+          exact path="/profile"
+          component={Profile} />  
         <Route
           path="/login"
           render={() =>
@@ -74,7 +85,14 @@ class App extends Component {
           render={() =>
             <Signup/>}
         />
-
+          {/* greet user if logged in: */}
+          {this.state.loggedIn &&
+          <p>Welcome, {this.state.username}!</p>
+        }
+        {/* <Route exact path='/Asleep' component={Asleep} />
+        <Route exact path='/Awake' component={Awake} /> */}
+        {/* Routes to different components */}
+      <Footer />
       </div>
     );
   }

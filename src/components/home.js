@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import GridHome from './GridHome'
+import Container from '@material-ui/core/Container';
 
 class Home extends Component {
     constructor() {
@@ -7,14 +9,13 @@ class Home extends Component {
 
 
     render() {
-        const imageStyle = {
-            width: 400
-        }
+        // const imageStyle = {
+        //     width: 400
+        // }
         return (
-            <div>
-                <p>It's good to be home</p>
-                <img alt='default' style={imageStyle} src="https://i.ytimg.com/vi/N1icEHtgb3g/maxresdefault.jpg" />
-            </div>
+            <Container>
+              <GridHome />
+            </Container>
         )
 
     }
