@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
+import { Route } from "react-router-dom";
+// import logo from "./babylogo.png";
+import "./App.css";
+// import Nav from "./components/Nav";
+import Footer2 from "./components/Footer2";
 // components
-import Signup from './components/sign-up'
-import LoginForm from './components/login-form'
-import Navbar from './components/navbar'
-import Home from './components/home'
+import Signup from './components/sign-up';
+import LoginForm from './components/login-form';
+import Profile from "./components/Profile";
+import Navbar from './components/navbar';
+import Home from './components/home';
+import Awake from "./components/Awake"
+import Asleep from "./components/Asleep"
 
 class App extends Component {
   constructor() {
@@ -60,8 +68,10 @@ class App extends Component {
         }
         {/* Routes to different components */}
         <Route
-          exact path="/"
-          component={Home} />
+          path="/home"
+          render={() =>
+            <Home/>}
+        />    
         <Route
           path="/login"
           render={() =>
@@ -74,7 +84,22 @@ class App extends Component {
           render={() =>
             <Signup/>}
         />
-
+        <Route
+          path="/profile"
+          render={() =>
+            <Profile/>}
+        />
+        <Route
+          path="/awake"
+          render={() =>
+            <Awake/>}
+        />
+        <Route
+          path="/asleep"
+          render={() =>
+            <Asleep/>}
+        />
+        <Footer2 />
       </div>
     );
   }
