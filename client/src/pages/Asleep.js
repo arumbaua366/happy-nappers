@@ -1,7 +1,8 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import GridProfile from "../components/GridProfile"
+import GridHome from "../components/GridHome"
+import GridAsleep from "../components/GridAsleep"
 
 const useStyles = makeStyles((theme) => ({
     
@@ -10,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
 function Profile() {
     
     return <Container>
-              <GridProfile />
+              <GridHome />
+              <GridAsleep />
             </Container>
     
 
