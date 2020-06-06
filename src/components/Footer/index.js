@@ -9,6 +9,7 @@ import LinkGithub from "../LinkGithub";
 const useStyles = makeStyles((theme) => ({
   text: {
     padding: theme.spacing(2, 2, 0),
+    // fontSize: '10',
   },
   paper: {
     paddingBottom: 50,
@@ -45,7 +46,7 @@ export default function BottomAppBar() {
       
       <AppBar position="fixed" color="primary" className={classes.appBar}>
       <Paper square className={classes.paper}>
-        <Typography className={classes.text} variant="body1" gutterBottom>
+        <Typography className={classes.text} variant="body1" gutterBottom style={{fontSize:14}}>
           Created by
           Mark Ohanesian, 
           Andrea Rumbaua, 

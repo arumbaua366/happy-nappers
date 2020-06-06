@@ -38,16 +38,16 @@ class Navbar extends Component {
         return (
             <div>
                 <AppBar>
-                <Toolbar>
+                <Toolbar style={{backgroundColor: "#92C8FE"}}>
                     <div>
                         {loggedIn ? (
                             <section className="navbar-section">
+                                <Link to="/" className="btn btn-link text-secondary" >
+                                    <span style={{color: "black"}} className="text">happy nappers</span>
+                                </Link>
                                 <Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
                                 <span className="text-secondary">logout</span></Link>
-                                <Link to="/" className="btn btn-link text-secondary">
-                                    <span className="text-secondary">home</span>
-                                </Link>
-                                <Link to="/profile" className="btn btn-link">
+                                <Link to="/profile" className="btn btn-link" align-items="right">
                                     <span className="text-secondary">profile</span>
 				                </Link>
                                 
@@ -55,10 +55,10 @@ class Navbar extends Component {
                         ) : (
                                 <section className="navbar-section">
                                     <Link to="/login" className="btn btn-link text-secondary">
-                                    <span className="text-secondary">login</span>
+                                    <span className="text" style={{color: "black"}}>login</span>
 				                    </Link>
                                     <Link to="/signup" className="btn btn-link">
-                                    <span className="text-secondary">sign up</span>
+                                    <span className="text" style={{color: "black"}}>sign up</span>
 				                    </Link>
                
                                 </section>
@@ -67,7 +67,7 @@ class Navbar extends Component {
                     <div className="col-4 col-ml-auto">
                     <div id="top-filler"></div>
                         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-                        <h1 className="App-title">Happy Nappers</h1>
+                        {/* <h1 className="App-title">Happy Nappers</h1> */}
                     </div>
                     </Toolbar>
                 </AppBar>
