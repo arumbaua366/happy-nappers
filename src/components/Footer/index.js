@@ -44,9 +44,9 @@ export default function BottomAppBar() {
     <React.Fragment>
       <CssBaseline />
       
-      <AppBar position="fixed" color="primary" className={classes.appBar}>
-      <Paper square className={classes.paper}>
-        <Typography className={classes.text} variant="body1" gutterBottom style={{fontSize:14}}>
+      <AppBar position="fixed" style={{backgroundColor: "#c7d2c0" }} className={classes.appBar}>
+      {/* <Paper square className={classes.paper}> */}
+        <Typography className={classes.text} variant="body1" gutterBottom style={{fontSize:14, color:"#3C4F30"}}>
           Created by
           Mark Ohanesian, 
           Andrea Rumbaua, 
@@ -55,7 +55,7 @@ export default function BottomAppBar() {
           <br></br>
           <LinkGithub />
         </Typography>
-      </Paper>
+      {/* </Paper> */}
       </AppBar>
     </React.Fragment>
   );

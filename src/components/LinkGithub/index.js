@@ -18,7 +18,7 @@ export default function Links() {
 
   return (
     <Typography className={classes.root}>
-      <Link href="https://github.com/arumbaua366/happy-nappers" onClick={preventDefault} style={{fontSize:14}}>
+      <Link href="https://github.com/arumbaua366/happy-nappers" onClick={preventDefault} style={{fontSize:14, fontWeight:800, color:"#3C4F30"}}>
         github
       </Link>
     </Typography>
