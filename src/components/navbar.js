@@ -38,27 +38,27 @@ class Navbar extends Component {
         return (
             <div>
                 <AppBar>
-                <Toolbar style={{backgroundColor: "#92C8FE"}}>
+                <Toolbar style={{backgroundColor: "#C7D2C0"}}>
                     <div>
                         {loggedIn ? (
                             <section className="navbar-section">
                                 <Link to="/" className="btn btn-link text-secondary" >
-                                    <span style={{color: "black"}} className="text">happy nappers</span>
+                                    <span style={{color: "#405433"}} className="text">happy nappers</span>
                                 </Link>
                                 <Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
-                                <span className="text-secondary">logout</span></Link>
+                                <span className="text" style={{color: "#405433"}}>logout</span></Link>
                                 <Link to="/profile" className="btn btn-link" align-items="right">
-                                    <span className="text-secondary">profile</span>
+                                    <span className="text" style={{color: "#405433"}}>profile</span>
 				                </Link>
                                 
                             </section>
                         ) : (
                                 <section className="navbar-section">
                                     <Link to="/login" className="btn btn-link text-secondary">
-                                    <span className="text" style={{color: "black"}}>login</span>
+                                    <span className="text" style={{color: "#405433"}}>login</span>
 				                    </Link>
                                     <Link to="/signup" className="btn btn-link">
-                                    <span className="text" style={{color: "black"}}>sign up</span>
+                                    <span className="text" style={{color: "#405433"}}>sign up</span>
 				                    </Link>
                
                                 </section>
