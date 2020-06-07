@@ -1,32 +1,25 @@
 import React from 'react';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import { purple } from '@material-ui/core/colors';
-
-const ColorButton = withStyles((theme) => ({
-  root: {
-    color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: purple[500],
-    '&:hover': {
-      backgroundColor: purple[700],
-    },
-  },
-}))(Button);
+import './AsleepBtn.css';
 
 const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: theme.spacing(1),
+  root: {
+    '& > *': {
+      margin: theme.spacing(0),
+      fullWidth: true,
+    },
   },
 }));
 
-export default function CustomizedButtons() {
+export default function OutlinedButtons() {
   const classes = useStyles();
 
   return (
-    <div>
-      <ColorButton variant="contained" color="primary" className={classes.margin} href="/asleep">
-        asleep
-      </ColorButton>
+    <div className={classes.root}>
+      <Button className="asleep-btn" href="/Asleep" variant="outlined">
+        Asleep
+      </Button>
     </div>
   );
 }
