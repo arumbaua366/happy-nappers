@@ -55,13 +55,13 @@ class App extends Component {
 
   render() {
     const appStyle = {
-      position: 'fixed',
-    	top: '30%',
-    	left: '50%',
-    	marginTop: '-150px',
-      marginLeft: '-250px',
-      marginBottom:'50px',
-      paddingBottom:'50px'
+      // position: 'relative',
+    	// // top: '30%',
+    	// // left: '50%',
+    	marginTop: '90px',
+      // // marginLeft: '-250px',
+      // // marginBottom:'50px',
+      // // paddingBottom:'50px'
     }
     return (
       <div style={appStyle} className="App">
