@@ -18,7 +18,7 @@ export default function OutlinedButtons() {
   return (
     <div className={classes.root}>
       <Button className="awake-btn" href="/awake" variant="outlined" style={{fullWidth: true,}}>
-        awake
+        play
       </Button>
     </div>
   );
