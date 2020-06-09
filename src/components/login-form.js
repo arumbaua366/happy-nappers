@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
+import './signup.css';
+import ChildCareIcon from '@material-ui/icons/ChildCare';
 
 class LoginForm extends Component {
     constructor() {
@@ -56,22 +58,22 @@ class LoginForm extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             const loginStyle = {
-                position: 'fixed',
+                position: 'relative',
                 top: '50%',
-                left: '50%',
-                marginTop: '-150px',
-                marginLeft: '-100px'
             }    
             return (
-                <div style={loginStyle}>
-                    <h4 className="col-12">Login</h4>
-                    <form className="form-horizontal">
-                        <div className="form-group">
-                            <div>
+                <div style={loginStyle} className="login-form">
+                    <br></br>
+                    <ChildCareIcon />
+                    <h4 className="col-12">Login to your account</h4>
+                    <br></br>
+                    <form className="login-form-group">
+                        <div className="">
+                            <div className="username-div">
                                 <label className="form-label" htmlFor="username">Username</label>
                             </div>
                             <div>
-                                <input className="form-input"
+                                <input className="username-form-input"
                                     type="text"
                                     id="username"
                                     name="username"
@@ -86,7 +88,7 @@ class LoginForm extends Component {
                                 <label className="form-label" htmlFor="password">Password: </label>
                             </div>
                             <div>
-                                <input className="form-input"
+                                <input className="password-form-input"
                                     placeholder="password"
                                     type="password"
                                     name="password"

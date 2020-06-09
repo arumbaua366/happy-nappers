@@ -1,0 +1,14 @@
+.password-form-input {
+    display: grid;
+    place-items: center;
+}
+
+.username-div {
+    display: grid !important;
+    place-items: center !important;
+}
+
+.form-label {
+    display: grid ;
+    place-items: center ;
+}

@@ -58,7 +58,8 @@ render() {
 		return <Redirect to={{ pathname: '/login' }} />
 	} else {
 	const signupStyle = {
-    	top: '50%',
+		position: 'relative',
+		top: '50%',
 	}	
 	return (
 		<div style={signupStyle} className="signup-form">
