@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import './signup.css';
+import ChildCareIcon from '@material-ui/icons/ChildCare';
+
 // import { makeStyles } from '@material-ui/core/styles';
 // import Paper from '@material-ui/core/Paper';
 // import Grid from '@material-ui/core/Grid';
@@ -55,22 +58,23 @@ render() {
 		return <Redirect to={{ pathname: '/login' }} />
 	} else {
 	const signupStyle = {
-		position: 'fixed',
     	top: '50%',
-    	left: '50%',
-    	marginTop: '-150px',
-  		marginLeft: '-100px'
 	}	
 	return (
-		<div style={signupStyle}>
-			<h4 className="col-12">Sign up</h4>
-			<form className="form-horizontal">
+		<div style={signupStyle} className="signup-form">
+			<div className="signup-header">
+				<br></br>
+				<ChildCareIcon />
+				<h4 className="col-12">Sign up for your happy nappers account</h4>
+			</div>
+			<br></br>
+			<form className="">
 				<div className="form-group">
 					<div>
-						<label className="form-label" htmlFor="username">Username: </label>
+						<label className="form-label" htmlFor="username">enter a username</label>
 					</div>
 					<div>
-						<input className="form-input"
+						<input className="username-input"
 							type="text"
 							id="username"
 							name="username"
@@ -82,10 +86,10 @@ render() {
 				</div>
 				<div className="form-group">
 					<div>
-						<label className="form-label" htmlFor="password">Password: </label>
+						<label className="form-label" htmlFor="password">enter a password: </label>
 					</div>
 					<div>
-						<input className="form-input"
+						<input className="password-input"
 							placeholder="password"
 							type="password"
 							name="password"
