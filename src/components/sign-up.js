@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import './signup.css';
 import ChildCareIcon from '@material-ui/icons/ChildCare';
+import ChildFriendlyIcon from '@material-ui/icons/ChildFriendly';
 
 // import { makeStyles } from '@material-ui/core/styles';
 // import Paper from '@material-ui/core/Paper';
@@ -66,6 +67,7 @@ render() {
 			<div className="signup-header">
 				<br></br>
 				<ChildCareIcon />
+				<ChildFriendlyIcon />
 				<h4 className="col-12">Sign up for your happy nappers account</h4>
 			</div>
 			<br></br>

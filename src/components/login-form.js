@@ -3,6 +3,8 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import './signup.css';
 import ChildCareIcon from '@material-ui/icons/ChildCare';
+import ChildFriendlyIcon from '@material-ui/icons/ChildFriendly';
+
 
 class LoginForm extends Component {
     constructor() {
@@ -65,6 +67,7 @@ class LoginForm extends Component {
                 <div style={loginStyle} className="login-form">
                     <br></br>
                     <ChildCareIcon />
+                    <ChildFriendlyIcon />
                     <h4 className="col-12">Login to your account</h4>
                     <br></br>
                     <form className="login-form-group">
