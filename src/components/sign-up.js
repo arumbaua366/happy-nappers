@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import './signup.css';
-import ChildCareIcon from '@material-ui/icons/ChildCare';
-import ChildFriendlyIcon from '@material-ui/icons/ChildFriendly';
-
+import Logo from "./Logo"
 // import { makeStyles } from '@material-ui/core/styles';
 // import Paper from '@material-ui/core/Paper';
 // import Grid from '@material-ui/core/Grid';
@@ -65,9 +63,10 @@ render() {
 	return (
 		<div style={signupStyle} className="signup-form">
 			<div className="signup-header">
+				<Logo />
 				<br></br>
-				<ChildCareIcon />
-				<ChildFriendlyIcon />
+				<br></br>
+				<br></br>
 				<h4 className="col-12">Sign up for your happy nappers account</h4>
 			</div>
 			<br></br>
