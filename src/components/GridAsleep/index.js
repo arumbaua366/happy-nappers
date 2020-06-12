@@ -37,9 +37,9 @@ export default function CenteredGrid() {
               alt="Asleep"
               style={{
                 verticalAlign: "middle",
-                width: "500px",
-                height: "500px",
-                padding: "30px",
+                maxWidth: "300px",
+                padding: "0px",
+                display: "center",
               }}
             ></img>
           </Paper>
