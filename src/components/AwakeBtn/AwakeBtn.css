@@ -1,7 +1,7 @@
-.awake-btn {
+#awake-btn {
     width: 400px !important;
     display: block !important;
     width: 100% !important;
     border: none !important;
-  
+    background-color: blue;
 }
