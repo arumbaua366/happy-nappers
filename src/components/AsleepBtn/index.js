@@ -17,7 +17,7 @@ export default function OutlinedButtons() {
 
   return (
     <div className={classes.root}>
-      <Button className="asleep-btn" href="/Asleep" variant="outlined">
+      <Button id="asleep-btn" href="/Asleep" variant="outlined">
         Sleep
       </Button>
     </div>
