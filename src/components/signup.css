@@ -1,0 +1,14 @@
+.signup-form {
+    display: grid;
+    place-items: center;
+    
+}
+
+.password-input {
+    background-color: white !important;
+}
+
+
+.username-input {
+    background-color: white !important;
+}
