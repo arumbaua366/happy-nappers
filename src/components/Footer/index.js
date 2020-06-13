@@ -44,7 +44,7 @@ export default function BottomAppBar() {
     <React.Fragment>
       <CssBaseline />
       
-      <AppBar position="fixed" style={{backgroundColor: "#7D84B2" }} className={classes.appBar}>
+      <AppBar position="fixed" style={{backgroundColor: "#b2a6ff" }} className={classes.appBar}>
       {/* <Paper square className={classes.paper}> */}
         <Typography className={classes.text} variant="body1" gutterBottom style={{fontSize:14, color:"#3C4F30"}}>
           Created by
