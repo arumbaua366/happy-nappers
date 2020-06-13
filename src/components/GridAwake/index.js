@@ -2,6 +2,15 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import SpotifyPlayer from "react-spotify-player";
+
+// size may also be a plain string using the presets 'large' or 'compact'
+const size = {
+  width: "100%",
+  height: 300,
+};
+const view = "list"; // or 'coverart'
+const theme = "white"; // or 'black'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    alignItems: 'center'
+    alignItems: "center",
   },
 }));
 
@@ -36,6 +45,12 @@ export default function CenteredGrid() {
           </Paper>
         </Grid> */}
       </Grid>
+      <SpotifyPlayer
+        uri="spotify:album:4FNX7VLAhDVWn6ghmaHFTp"
+        size={size}
+        view={view}
+        theme={theme}
+      />
     </div>
   );
 }
