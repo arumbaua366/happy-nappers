@@ -3,19 +3,28 @@ import React from "react";
 import Container from '@material-ui/core/Container';
 import GridAwake from "./GridAwake"
 import GridHome from "./GridHome"
+import { ThemeProvider } from "@material-ui/styles";
+import Navbar from "./navbar"
 
-// const useStyles = makeStyles((theme) => ({
-    
-//   }));
+import { createMuiTheme } from "@material-ui/core";
 
-function Profile() {
-    
-    return <Container>
-              <GridHome />
-              <GridAwake />
-            </Container>
-    
+const theme = createMuiTheme({
+  palette: {
+    type: "light"
+  }
+});
 
+function Awake() {
+    
+  return (
+    <ThemeProvider theme={theme}>
+      <Navbar />
+      <Container>
+        <GridHome />
+        <GridAwake />
+      </Container>
+    </ThemeProvider>
+      )
 }
 
-export default Profile
+export default Awake

@@ -2,14 +2,16 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-// import DeleteBtn from "../DeleteBtn"
+import { ThemeProvider } from '@material-ui/core/styles';
+
+import { createMuiTheme } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(8),
     textAlign: 'center',
     color: theme.palette.text.secondary,
     alignItems: 'center'
@@ -31,11 +33,11 @@ export default function CenteredGrid() {
           <Paper className={classes.paper}>
           </Paper>
         </Grid> */}
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <Paper className={classes.paper}>
 
           </Paper>
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

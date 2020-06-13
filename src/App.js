@@ -65,7 +65,10 @@ class App extends Component {
     };
     return (
       <div style={appStyle} className="App">
+        {/* greet user if logged in: */}
+        {this.state.loggedIn && <h3 >Welcome, {this.state.username}!</h3>}
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+        
         <Route exact path="/" component={Home} />
         <Route exact path="/profile" component={Profile} />
         <Route
@@ -73,11 +76,9 @@ class App extends Component {
           render={() => <LoginForm updateUser={this.updateUser} />}
         />
         <Route path="/signup" render={() => <Signup />} />
-        {/* greet user if logged in: */}
-        {this.state.loggedIn && <p>Welcome, {this.state.username}!</p>}
+        {/* Routes to different components */}
         <Route exact path="/Asleep" component={Asleep} />
         <Route exact path="/Awake" component={Awake} />
-        {/* Routes to different components */}
         <Footer />
       </div>
     );

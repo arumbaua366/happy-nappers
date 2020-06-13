@@ -46,7 +46,7 @@ class Navbar extends Component {
                     <Toolbar className="navbar">
                         <div className="happy-nappers-div">
                             {/* <div className="happy-nappers-div" id="top-filler"> */}
-
+                            
                             <Link to="/">
                                 <span className="happy-nappers-link">happy nappers</span>
                             </Link>
