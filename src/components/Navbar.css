@@ -22,8 +22,7 @@
     cursor: pointer;
     /* background-image: linear-gradient(to bottom right, #80B37D, #7CA8BF); */
     flex: 1 1 auto;
-    margin: 0px;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
