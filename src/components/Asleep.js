@@ -4,7 +4,6 @@ import Container from '@material-ui/core/Container';
 import GridHome from "./GridHome"
 import GridAsleep from "./GridAsleep"
 import { ThemeProvider } from "@material-ui/styles";
-import Navbar from "./navbar"
 
 import { createMuiTheme } from "@material-ui/core";
 
@@ -17,13 +16,12 @@ const theme = createMuiTheme({
 function Asleep() {
     
     return (
-          <ThemeProvider theme={theme}>
-            <Navbar />
-            <Container>
+        <ThemeProvider theme={theme}>
+          <Container>
               <GridHome />
               <GridAsleep />
             </Container>
-          </ThemeProvider>
+        </ThemeProvider>
             )
 }
 

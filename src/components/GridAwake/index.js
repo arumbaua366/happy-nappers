@@ -26,7 +26,7 @@ export default function CenteredGrid() {
       <Grid container spacing={0}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-              <img src="https://media3.giphy.com/media/qZohEEh4bhuQ8/giphy.gif?cid=6104955eec03a397e8f246036534b4597eed2d1fcfa22281&rid=giphy.gif" alt="Sun" style={{verticalAlign: "middle", width: "500px", height: "500px", padding: "30px" }}></img>
+              <img src="https://media1.tenor.com/images/714043687bc499a2c53f00af4390292a/tenor.gif?itemid=15577102" alt="Sun" style={{verticalAlign: "middle", width: "500px", height: "500px", padding: "30px" }}></img>
             </Paper>
         </Grid>
         {/* <Grid item xs={12}>
