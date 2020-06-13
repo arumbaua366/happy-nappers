@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(0),
-    textAlign: "center",
+    padding: theme.spacing(8),
+    textAlign: 'center',
     color: theme.palette.text.secondary,
     alignItems: "center",
   },
@@ -55,7 +55,7 @@ export default function CenteredGrid() {
         {/* </Grid> */}
       </Grid>
       <SpotifyPlayer
-        uri="spotify:album:1TIUsv8qmYLpBEhvmBmyBk"
+        uri="spotify:album:1R0dq0ngB0BJQvRoDL7qfg"
         size={size}
         view={view}
         theme={theme}
