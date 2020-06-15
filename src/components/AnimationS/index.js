@@ -36,9 +36,9 @@ const Gradients = ({ time }) =>
     shader={shaders.gradients}
     uniforms={{
       colors: [
-        [ Math.cos(0.002*time), Math.sin(0.002*time), 0.2, 1 ],
-        [ Math.sin(0.002*time), -Math.cos(0.002*time), 0.1, 1 ],
-        [ 0.3, Math.sin(3+0.002*time), Math.cos(1+0.003*time), 1 ]
+        [ Math.cos(0.001*time), Math.sin(0.001*time), 0.2, 1 ],
+        [ Math.sin(0.001*time), -Math.cos(0.001*time), 0.1, 1 ],
+        [ 0.3, Math.sin(3+0.001*time), Math.cos(1+0.003*time), 1 ]
       ],
       particles: [
         [ 0.3, 0.3 ],
