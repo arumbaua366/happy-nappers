@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import SpotifyPlayer from "react-spotify-player";
-import Animation from "../Animation"
+import AnimationP from "../AnimationP"
 
 
 // size may also be a plain string using the presets 'large' or 'compact'
@@ -40,7 +40,7 @@ export default function CenteredGrid() {
                     padding: "0px",
                     display: "center", }}></img> */}
           {/* </Paper> */}
-          <Animation />
+          <AnimationP />
 
         </Grid>
         {/* <Grid item xs={12}>
