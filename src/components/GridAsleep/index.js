@@ -56,6 +56,7 @@ export default function CenteredGrid() {
       </Grid>
       <SpotifyPlayer
         uri="spotify:album:1R0dq0ngB0BJQvRoDL7qfg"
+        autoPlay={true}
         size={size}
         view={view}
         theme={theme}

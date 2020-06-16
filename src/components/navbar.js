@@ -64,7 +64,7 @@ class Navbar extends Component {
                                         </span> */}
                                     {/* </Link> */} 
                                     <Link
-                                        to="/login"
+                                        to="#"
                                         className="btn btn-link text-secondary"
                                         onClick={this.logout}
                                     >

@@ -11,11 +11,14 @@ import Footer from "./components/Footer";
 import Asleep from "./components/Asleep";
 import Awake from "./components/Awake";
 
+
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       loggedIn: false,
+      firstname: null,
+      lastname: null,
       username: null,
     };
 
@@ -42,11 +45,15 @@ class App extends Component {
         this.setState({
           loggedIn: true,
           username: response.data.user.username,
+          firstname: response.data.user.firstname,
+          lastname: response.data.user.lastname,
         });
       } else {
         console.log("Get user: no user");
         this.setState({
           loggedIn: false,
+          firstname: null,
+          lastname: null,
           username: null,
         });
       }
@@ -70,13 +77,17 @@ class App extends Component {
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         
         <Route exact path="/" component={Home} />
-        <Route exact path="/profile" component={Profile} />
+        <Route
+          path="/profile"
+          render={() => <Profile username={this.state.username}/>}
+        />
         <Route
           path="/login"
           render={() => <LoginForm updateUser={this.updateUser} />}
         />
         <Route path="/signup" render={() => <Signup />} />
         {/* Routes to different components */}
+
         <Route exact path="/Asleep" component={Asleep} />
         <Route exact path="/Awake" component={Awake} />
         <Footer />

@@ -1,79 +1,51 @@
 import React, { Component } from 'react';
-// import { Redirect } from 'react-router-dom';
-import axios from 'axios';
 import './profile.css';
-// import { makeStyles } from '@material-ui/core/styles';
-// import Container from '@material-ui/core/Container';
-// import GridProfile from "./GridProfile"
-
-
+// import AwakeBtn from './AwakeBtn';
+// import AsleepBtn from './AsleepBtn';
+import { makeStyles } from '@material-ui/core/styles';
 
 class Profile extends Component {
-  constructor() {
-    super();
-    this.state = {
-      loggedIn: true,
-      firstname: '',
-      lastname: '',
-      username: '',
-      clickedAwake: '',
-      clickedAsleep: '',
-      bio: null,
-    };
+    render() {
 
-    this.handleSubmit = this.handleSubmit.bind(this)
-		this.handleChange = this.handleChange.bind(this)
-
-  } 
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-  handleSubmit(event) {
-    console.log('profile, handleSubmit, firstname:, lastname: , username: , clickedAwake: , clickedAsleep: , bio: ')
-    console.log(this.state.username)
-    event.preventDefault()
-
-    axios.get('/user/', {
-			firstname: this.state.firstname,
-			lastname: this.state.lastname,
-			username: this.state.username,
-      clickedAwake: this.state.clickedAwake,
-      clickedAsleep: this.state.clickedAsleep,
-      bio: this.state.bio
-		})  
-  }
-
-
-
-  render() {
-    // if (this.state.loggedIn) {
-    //   return (<Redirect to={{ pathname: '/profile' }
-    // } />)
-    // } 
-    return (
-      <div>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-       
-        <h2>Welcome {this.state.firstname}</h2>
+      return(
+      <div>  
+      <h2>Welcome {this.props.username}!</h2>
+      <img src="https://images.unsplash.com/photo-1537815749002-de6a533c64db?ixlib=rb-1.2.1&auto=format&fit=crop&w=1090&q=80" alt="Avatar" id="avatar" style={{verticalAlign: "middle", width: "200px", height: "200px", borderRadius: "50%", padding: "30px" }}></img>
+              <h2>{this.props.firstname}<span> </span>{this.props.lastname}</h2>
+              <h3><i>Sacramento, CA</i></h3> 
+              <p>Bio: </p>
+              <p>Awake Mode Used: 13</p>
+              <p>Asleep Mode Used: 13</p>
+              <br></br>
+              <p><i>member since:2020</i></p>
       </div>
-    )
-    
-  }
-    // return <Container>
-    //           <GridProfile />
-    //         </Container>
-    
+      )
+    }
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       loggedIn: true,
+//       username: '',
+//       awakeCount: 0,
+//       asleepCount: 0
+//     };
+//   }
 
+//   updateCount() {
+//     this.setState((prevState, props) => {
+//       return { count: prevState.count + 1 }
+//     });
+//   }
+
+//   render() {
+//     return (
+//             <button
+//               onClick={() => this.updateCount()}
+//             >
+//               Clicked {this.state.count} times
+//             </button>
+//             )
+//   }
 }
 
 export default Profile

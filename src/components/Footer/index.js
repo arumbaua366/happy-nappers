@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 import LinkGithub from "../LinkGithub";
 
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +44,7 @@ export default function BottomAppBar() {
     <React.Fragment>
       <CssBaseline />
       
-      <AppBar position="fixed" style={{backgroundColor: "#7D84B2" }} className={classes.appBar}>
+      <AppBar boxShadow={4} position="fixed" style={{backgroundColor: "#FFBF69" }} className={classes.appBar}>
       {/* <Paper square className={classes.paper}> */}
         <Typography className={classes.text} variant="body1" gutterBottom style={{fontSize:14, color:"#3C4F30"}}>
           Created by
