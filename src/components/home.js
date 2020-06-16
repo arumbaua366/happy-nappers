@@ -3,9 +3,9 @@ import GridHome from './GridHome'
 import Container from '@material-ui/core/Container';
 
 class Home extends Component {
-    constructor() {
-        super()
-    }
+    // constructor() {
+    //     super()
+    // }
 
 
     render() {

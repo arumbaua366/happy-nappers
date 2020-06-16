@@ -11,6 +11,8 @@ class Signup extends Component {
 	constructor() {
 		super()
 		this.state = {
+			firstname: '',
+			lastname: '',
 			username: '',
 			password: '',
 			confirmPassword: '',
@@ -25,12 +27,14 @@ class Signup extends Component {
 		})
 	}
 	handleSubmit(event) {
-		console.log('sign-up handleSubmit, username: ')
+		console.log('sign-up handleSubmit, firstname: , lastname: , username: ')
 		console.log(this.state.username)
 		event.preventDefault()
 
 		//request to server to add a new username/password
 		axios.post('/user/', {
+			firstname: this.state.firstname,
+			lastname: this.state.lastname,
 			username: this.state.username,
 			password: this.state.password
 		})
@@ -39,7 +43,7 @@ class Signup extends Component {
 				if (!response.data.errmsg) {
 					console.log('successful signup')
 					this.setState({ //redirect to login page
-						redirectTo: '/login'
+						redirectTo: '/'
 					})
 				} else {
 					console.log('username already taken')
@@ -54,7 +58,7 @@ class Signup extends Component {
 
 render() {
 	if (this.state.redirectTo) {
-		return <Redirect to={{ pathname: '/login' }} />
+		return <Redirect to={{ pathname: '/' }} />
 	} else {
 	const signupStyle = {
 		position: 'relative',
@@ -73,6 +77,31 @@ render() {
 			<form className="">
 				<div className="form-group">
 					<div>
+						<label className="form-label" htmlFor="firstname">enter your name</label>
+					</div>
+					<div className="name-div">
+						<input className="fname-input"
+							type="text"
+							id="firstname"
+							name="firstname"
+							placeholder="first name"
+							value={this.state.firstname}
+							onChange={this.handleChange}
+						/>
+					<span>  </span>
+						<input className="lname-input"
+							type="text"
+							id="lastname"
+							name="lastname"
+							placeholder="last name"
+							value={this.state.lastname}
+							onChange={this.handleChange}
+						/>
+					
+					</div>
+				</div>
+				<div className="form-group">
+					<div>
 						<label className="form-label" htmlFor="username">enter a username</label>
 					</div>
 					<div>
@@ -80,7 +109,7 @@ render() {
 							type="text"
 							id="username"
 							name="username"
-							placeholder="Username"
+							placeholder="username"
 							value={this.state.username}
 							onChange={this.handleChange}
 						/>

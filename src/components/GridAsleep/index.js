@@ -1,8 +1,8 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import SpotifyPlayer from "react-spotify-player";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import SpotifyPlayer from 'react-spotify-player';
 
 // size may also be a plain string using the presets 'large' or 'compact'
 const size = {
@@ -33,7 +33,7 @@ export default function CenteredGrid() {
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <img
-              src="https://media2.giphy.com/media/3ohze0k1Z43jsEJMCQ/giphy.gif?cid=6104955e8fe36ca832f97b44d7d842372eb39e7405d67085&rid=giphy.gif"
+              src="https://media0.giphy.com/media/dAQ0kcdNpnalaoZFgQ/source.gif"
               alt="Asleep"
               style={{
                 verticalAlign: "middle",

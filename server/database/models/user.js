@@ -6,8 +6,13 @@ mongoose.promise = Promise
 // Define userSchema
 const userSchema = new Schema({
 
+	avatar: { type: String, required: false },
+	firstname: { type: String, unique: false, required: false },
+	lastname: { type: String, unique: false, required: false },
 	username: { type: String, unique: false, required: false },
-	password: { type: String, unique: false, required: false }
+	password: { type: String, unique: false, required: false },
+	clickedAwake: { type: Number},
+	clickedAsleep: { type: Number}
 
 })
 
