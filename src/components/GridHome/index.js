@@ -25,14 +25,10 @@ export default function CenteredGrid() {
     <div className={classes.root}>
       <Grid container spacing={0}>
         <Grid item xs={6}>
-            <Paper className={classes.paper}>
-              <AwakeBtn />
-            </Paper>
+          <AwakeBtn />
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            <AsleepBtn />
-          </Paper>
+          <AsleepBtn />
         </Grid>
       </Grid>
     </div>
