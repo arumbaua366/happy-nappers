@@ -11,7 +11,6 @@ import Footer from "./components/Footer";
 import Asleep from "./components/Asleep";
 import Awake from "./components/Awake";
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,11 +19,14 @@ class App extends Component {
       firstname: null,
       lastname: null,
       username: null,
+      clickedAwake: 0,
+      clickedAsleep: 0,
     };
 
     this.getUser = this.getUser.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateUser = this.updateUser.bind(this);
+    this.increment.bind(this);
   }
 
   componentDidMount() {
@@ -60,6 +62,13 @@ class App extends Component {
     });
   }
 
+  increment = () => {
+    this.setState({
+        clickedAsleep: this.state.clickedAsleep + 1,
+        clickedAwake: this.state.clickedAwake + 1
+    })
+  }
+
   render() {
     const appStyle = {
       // position: 'relative',
@@ -72,8 +81,7 @@ class App extends Component {
     };
     return (
       <div style={appStyle} className="App">
-        {/* greet user if logged in: */}
-        {/* {this.state.loggedIn && <h3 >Welcome, {this.state.username}!</h3>} */}
+
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         
         <Route exact path="/" component={Home} />
@@ -88,8 +96,8 @@ class App extends Component {
         <Route path="/signup" render={() => <Signup />} />
         {/* Routes to different components */}
 
-        <Route exact path="/Asleep" component={Asleep} />
-        <Route exact path="/Awake" component={Awake} />
+        <Route path="/Asleep" render={() => <Asleep clickedAsleep={this.state.clickedAsleep}/>} />
+        <Route path="/Awake" render={() => <Awake clickedAwake={this.state.clickedAwake}/>} />
         <Footer />
       </div>
     );
