@@ -109,7 +109,7 @@ render() {
 							type="text"
 							id="username"
 							name="username"
-							placeholder="username"
+							placeholder="naplover88"
 							value={this.state.username}
 							onChange={this.handleChange}
 						/>
@@ -117,11 +117,11 @@ render() {
 				</div>
 				<div className="form-group">
 					<div>
-						<label className="form-label" htmlFor="password">enter a password: </label>
+						<label className="form-label" htmlFor="password">enter a password </label>
 					</div>
 					<div>
 						<input className="password-input"
-							placeholder="password"
+							placeholder="password123!"
 							type="password"
 							name="password"
 							value={this.state.password}
