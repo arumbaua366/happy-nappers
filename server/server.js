@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3001;
 // Route requires
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("../build"));
+  app.use(express.static("/build"));
 }
 const user = require('./routes/user')
 
@@ -44,7 +44,7 @@ app.use('/user', user)
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
-	res.sendFile("../build/index.html");
+	res.sendFile(path.join(__dirname, "../build/index.html"));
   });
 // app.use('/', express.static('../build'))
 // Starting Server 
