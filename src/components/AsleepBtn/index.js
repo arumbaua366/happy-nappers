@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function OutlinedButtons() {
+export default function Asleep() {
   const classes = useStyles();
 
   return (
