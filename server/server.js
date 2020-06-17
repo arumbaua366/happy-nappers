@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
@@ -44,6 +45,8 @@ app.use('/user', user)
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
+	console.log(path.join(__dirname, "../build/index.html"))
+	
 	res.sendFile(path.join(__dirname, "../build/index.html"));
   });
 // app.use('/', express.static('../build'))
