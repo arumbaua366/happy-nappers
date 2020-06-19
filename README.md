@@ -5,7 +5,7 @@ Happy Nappers
 Music has always been a helpful tool with raising children. As a new mom/dad, aunt/uncle, or grandparent, I would love a way to easily play music based on baby’s bed time and play time. With my hands full as it is, I would like an app that is simple, as I don't have time to look up playlists and search for songs.
 
 # Links
-* [Deployed Site](https://test-nappers.herokuapp.com/login)
+* [Deployed Site](https://happy-nappers.herokuapp.com/login)
 * [Github](https://github.com/arumbaua366/happy-nappers)
 * [Project Management](https://github.com/arumbaua366/happy-nappers/projects/1)
 * [Google Doc](https://docs.google.com/document/d/19VVvtqEw6IXby7mdAdby6luc0bVuAAzFE0YiiEjSDlU/edit?usp=sharing)
