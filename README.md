@@ -1,5 +1,6 @@
-# Project Title
-Happy Nappers
+# Happy Nappers
+
+![happy nappers demo](public/happy-nappers-demo.gif)
 
 # User Story
 Music has always been a helpful tool with raising children. As a new mom/dad, aunt/uncle, or grandparent, I would love a way to easily play music based on baby’s bed time and play time. With my hands full as it is, I would like an app that is simple, as I don't have time to look up playlists and search for songs.
