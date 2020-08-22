@@ -6,8 +6,8 @@ import "./AwakeBtn.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
-      margin: theme.spacing(0),
-      fullWidth: true,
+      // margin: theme.spacing(0),
+      // fullWidth: true,
     },
   },
 }));

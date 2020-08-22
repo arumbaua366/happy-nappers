@@ -1,24 +1,19 @@
-import React, { Component } from 'react'
-import GridHome from './GridHome'
-import Container from '@material-ui/core/Container';
+import React, { Component, Text } from "react";
+import Container from "@material-ui/core/Container";
+import Logo from "./Logo";
+import AwakeBtn from "./AwakeBtn"
+import AsleepBtn from "./AsleepBtn"
 
 class Home extends Component {
-    // constructor() {
-    //     super()
-    // }
-
-
-    render() {
-        // const imageStyle = {
-        //     width: 400
-        // }
-        return (
-            <Container>
-              <GridHome />
-            </Container>
-        )
-
-    }
+  render() {
+    return (
+      <Container >
+        <Logo />
+        <AwakeBtn />
+        <AsleepBtn />
+      </Container>
+    );
+  }
 }
 
-export default Home
+export default Home;
