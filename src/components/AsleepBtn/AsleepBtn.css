@@ -1,7 +1,9 @@
 #asleep-btn {
-    width: 400px !important;
-    display: block !important;
-    width: 100% !important;
-    border: none !important;  
-    background-color: white;
+    width: 170px !important;
+    height: 170px !important;
+    background-color: #B2A6FF !important;
+    border-radius: 15px !important;
+    color: white !important;
+    text-align: center !important;
+    margin: 5px !important;
 }
