@@ -1,16 +1,16 @@
 import React, { Component, Text } from "react";
 import Container from "@material-ui/core/Container";
-import Logo from "./Logo";
-import AwakeBtn from "./AwakeBtn"
-import AsleepBtn from "./AsleepBtn"
+import LogoDark from "./LogoDark";
+import PlayBtn from "./PlayBtn"
+import SleepBtn from "./SleepBtn"
 
 class Home extends Component {
   render() {
     return (
       <Container >
-        <Logo />
-        <AwakeBtn />
-        <AsleepBtn />
+        <LogoDark />
+        <PlayBtn />
+        <SleepBtn />
       </Container>
     );
   }
