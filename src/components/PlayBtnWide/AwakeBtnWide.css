@@ -1,0 +1,10 @@
+#awake-btn {
+    width: 100% !important;
+    height: 50px !important;
+    border: none !important;
+    background-color: #f9940b;
+    color: white !important;
+    border-radius: 0px !important;
+    text-align: center !important;
+    margin: 5px !important;
+}
