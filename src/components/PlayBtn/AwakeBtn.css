@@ -1,0 +1,10 @@
+#play-btn {
+    width: 170px !important;
+    height: 170px !important;
+    border: none !important;
+    background-color: #f9940b;
+    color: white !important;
+    border-radius: 100px !important;
+    text-align: center !important;
+    margin: 5px !important;
+}
