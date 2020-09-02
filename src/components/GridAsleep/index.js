@@ -32,28 +32,7 @@ export default function CenteredGrid() {
       <Grid container spacing={0}>
         <Grid item xs={12}>
             <AnimationS />
-            {/* <img
-              src="https://media2.giphy.com/media/3ohze0k1Z43jsEJMCQ/giphy.gif?cid=6104955e8fe36ca832f97b44d7d842372eb39e7405d67085&rid=giphy.gif"
-              alt="Asleep"
-              style={{
-                verticalAlign: "middle",
-                maxWidth: "300px",
-                padding: "0px",
-                display: "center",
-              }}
-            ></img> */}
-          {/* <Paper className={classes.paper}>
-          </Paper> */}
         </Grid>
-        {/* <Grid item xs={12}>
-          <Paper className={classes.paper}>
-          </Paper>
-        </Grid> */}
-        {/* <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            
-          </Paper> */}
-        {/* </Grid> */}
       </Grid>
       <SpotifyPlayer
         uri="spotify:album:1R0dq0ngB0BJQvRoDL7qfg"
