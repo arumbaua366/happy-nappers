@@ -1,27 +1,48 @@
 import React from "react";
-import Container from '@material-ui/core/Container';
-import GridHome from "./GridHome"
-import GridAsleep from "./GridAsleep"
 import { ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core";
-import AwakeBtn from './AwakeBtn';
-
+import { Grid, Container } from "@material-ui/core";
+// page components
+import PlayBtnWide from './/PlayBtnWide'
+import SpotifyPlayer from "react-spotify-player";
+import AnimationS from './AnimationS'
+// Spotify Player Size
+const size = {
+  width: "100%",
+  height: 80,
+};
 const theme = createMuiTheme({
   palette: {
-    type: "dark"
-  }
+    type: "light",
+  },
 });
 
-function Asleep() {
-    
-    return (
-        <ThemeProvider theme={theme}>
+function Awake() {
+  return (
+    <ThemeProvider theme={theme}>
+      <Grid container spacing={0}>
+        <Grid item xs={12}>
           <Container>
-              <AwakeBtn />
-              <GridAsleep />
-            </Container>
-        </ThemeProvider>
-            )
+            <PlayBtnWide />
+          </Container>
+        </Grid>
+        <Grid item xs={12}>
+          <Container>
+            <AnimationS />
+          </Container>
+        </Grid>
+        <Grid item xs={12}>
+          <Container>
+            <SpotifyPlayer
+              uri="spotify:track:6yyXBdr0JP7QgqWezqNi3C"
+              autoPlay={true}
+              size={size}
+              />
+          </Container>
+        </Grid>
+      </Grid>
+    </ThemeProvider>
+  );
 }
 
-export default Asleep
+export default Awake;
