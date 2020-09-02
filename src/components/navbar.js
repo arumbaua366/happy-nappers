@@ -48,7 +48,7 @@ class Navbar extends Component {
                             {/* <div className="happy-nappers-div" id="top-filler"> */}
                             
                             <Link to="/">
-                                <span className="happy-nappers-link">happy nappers</span>
+                                <span className="happy-nappers-link">home</span>
                             </Link>
                             {/* </div> */}
                             {/* <img src={logo} className="App-logo" alt="logo" /> */}

@@ -22,8 +22,6 @@
     border: 1px solid white;
     border-radius: 25px;
     outline: none;
-    text-decoration-line: none !important;
-    /* background-image: linear-gradient(to bottom right, #80B37D, #7CA8BF); */
     flex: 1 1 auto;
     padding: 10px;
     text-align: center;
@@ -35,4 +33,15 @@
 .happy-nappers-div:hover {
     background-color: white;
     border-radius: 25px;
+    color: black !important;
   }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  a:visited {
+      text-decoration: none;
+      border:none !important;
+}
+  
