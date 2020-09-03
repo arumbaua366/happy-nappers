@@ -2,6 +2,8 @@
 
 ![happy nappers demo](public/happy-nappers-demo.gif)
 
+# Description
+Happy Nappers is a simple web app that allows you to toggle between awake and asleep modes  that generate music and visualizations for babies that help with both sleep time and playtime. 
 
 # User Story
 Music has always been a helpful tool with raising children. As a new mom/dad, aunt/uncle, or grandparent, I would love a way to easily play music based on baby’s bed time and play time. With my hands full as it is, I would like an app that is simple, as I don't have time to look up playlists and search for songs.
@@ -20,9 +22,6 @@ Music has always been a helpful tool with raising children. As a new mom/dad, au
 * MongoDB
 * Express
 * Node
-
-# Description
-Happy nappers is a simple web app that allows you to toggle between awake and asleep modes  that generate music and visualizations for babies that help with both sleep time and playtime. 
 
 # Planned Features/Outstanding Issues
 * Functional login and signup with app and spotify 
