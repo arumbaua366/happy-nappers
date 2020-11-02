@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-// import { Redirect } from 'react-router-dom'
-// import { Route, Link } from 'react-router-dom'
 import { Link } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-// import logo from '../logo.svg';
 import "../App.css";
 import axios from "axios";
 import './Navbar.css';
@@ -45,14 +42,9 @@ class Navbar extends Component {
                 <AppBar>
                     <Toolbar className="navbar">
                         <div className="happy-nappers-div">
-                            {/* <div className="happy-nappers-div" id="top-filler"> */}
-                            
-                            <Link to="/">
-                                <span className="happy-nappers-link">home</span>
+                            <Link id="home-link" to="/">
+                                home
                             </Link>
-                            {/* </div> */}
-                            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-                            {/* <h1 className="App-title">Happy Nappers</h1> */}
                         </div>
                         <div>
                             {loggedIn ? (
