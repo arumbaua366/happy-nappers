@@ -15,7 +15,7 @@ export default function OutlinedButtons() {
 
   return (
     <div className={classes.root}>
-      <Button variant="outlined" href="/home">happy nappers</Button>
+      <Button variant="outlined" href="/home">home</Button>
     </div>
   );
 }
